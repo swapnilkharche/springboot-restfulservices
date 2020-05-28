@@ -4,8 +4,6 @@ import java.util.Date;
 
 import javax.validation.constraints.Email;
 
-import lombok.Getter;
-import lombok.Setter;
 
 public class Employee {
 	

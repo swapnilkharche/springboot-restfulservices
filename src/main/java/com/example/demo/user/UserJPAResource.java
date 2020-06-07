@@ -14,6 +14,7 @@ import org.springframework.hateoas.Link;
 import org.springframework.hateoas.server.EntityLinks;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.example.demo.post.Post;
 import com.example.demo.post.PostRepository;
+
 
 @RestController
 public class UserJPAResource {
@@ -37,6 +39,7 @@ public class UserJPAResource {
 	EntityLinks entityLinks;
 
 	// find All Users
+	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping(path = "/jpa/users")
 	public List<User> findAll() {
 		return userRepository.findAll();

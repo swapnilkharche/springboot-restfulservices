@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Email;
 
 import com.example.demo.post.Post;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -17,6 +18,7 @@ public class User {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private Integer id;	
 	private String name;
+//	private Email email;
 	private Date date;
 	
 	@OneToMany(mappedBy="user")

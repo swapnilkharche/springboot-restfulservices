@@ -2,6 +2,7 @@ package com.example.demo.user;
 
 import java.net.URI;
 import java.nio.file.attribute.UserPrincipalNotFoundException;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,6 +29,7 @@ import com.example.demo.post.PostRepository;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class UserJPAResource {
 	@Autowired
 	private UserDaoService service;
@@ -39,7 +41,7 @@ public class UserJPAResource {
 	EntityLinks entityLinks;
 
 	// find All Users
-	@CrossOrigin(origins = "http://localhost:4200")
+	
 	@GetMapping(path = "/jpa/users")
 	public List<User> findAll() {
 		return userRepository.findAll();
@@ -68,6 +70,7 @@ public class UserJPAResource {
 	// return created user
 	@PostMapping(path = "/jpa/users")
 	public ResponseEntity<Object> createUser(@RequestBody User user) {
+		user.setDate(new Date());
 		User savedUser = userRepository.save(user);
 
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/users").buildAndExpand(savedUser.getId())

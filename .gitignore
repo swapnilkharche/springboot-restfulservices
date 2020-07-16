@@ -39,3 +39,6 @@ transaction-logs
 secrets.yml
 .gradletasknamecache
 .sts4-cache
+.classpath
+.settings/org.eclipse.jdt.core.prefs
+.settings/org.eclipse.m2e.core.prefs

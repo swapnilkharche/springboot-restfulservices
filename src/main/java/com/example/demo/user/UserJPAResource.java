@@ -29,7 +29,7 @@ import com.example.demo.post.PostRepository;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
 public class UserJPAResource {
 	@Autowired
 	private UserDaoService service;

@@ -39,6 +39,12 @@ transaction-logs
 secrets.yml
 .gradletasknamecache
 .sts4-cache
+<<<<<<< HEAD
 
 # Ignore .idea files
 .idea/
+=======
+.classpath
+.settings/org.eclipse.jdt.core.prefs
+.settings/org.eclipse.m2e.core.prefs
+>>>>>>> bac0d1bc54038de60ebd6e8083a959f5bdb8593d

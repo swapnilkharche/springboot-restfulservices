@@ -18,11 +18,8 @@ public class DemoRestfulServicesApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-<<<<<<< HEAD
-				registry.addMapping("/jpa/users").allowedOrigins("http://localhost:4200");
-=======
+//				registry.addMapping("/jpa/users").allowedOrigins("http://localhost:4200");
 				registry.addMapping("/**").allowedOrigins("http://localhost:4200");
->>>>>>> bac0d1bc54038de60ebd6e8083a959f5bdb8593d
 			}
 		};
 	}
